@@ -7,21 +7,24 @@
      "ServerSideEncryptionConfiguration": [
       {
        "ServerSideEncryptionByDefault": {
-        "SSEAlgorithm": "aws:kms"
+        "SSEAlgorithm": "AES256"
        }
       }
      ]
     },
     "BucketName": "learn-aws-cdk",
+    "PublicAccessBlockConfiguration": {
+     "BlockPublicAcls": true,
+     "BlockPublicPolicy": true,
+     "IgnorePublicAcls": true,
+     "RestrictPublicBuckets": true
+    },
     "Tags": [
      {
       "Key": "aws-cdk:auto-delete-objects",
       "Value": "true"
      }
-    ],
-    "VersioningConfiguration": {
-     "Status": "Enabled"
-    }
+    ]
    },
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
