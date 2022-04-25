@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 const cdk = require('aws-cdk-lib');
-const { CdkPrjJsStack } = require('../lib/cdk-prj-js-stack');
+const { HelloCdkStack } = require('../lib/cdk-prj-js-stack');
 
 const app = new cdk.App();
-new CdkPrjJsStack(app, 'CdkPrjJsStack', {
+new HelloCdkStack(app, 'HelloCdkStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
